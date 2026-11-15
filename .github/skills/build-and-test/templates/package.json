@@ -1,0 +1,28 @@
+{
+  "name": "hello-js",
+  "version": "1.0.0",
+  "description": "Cross-platform Hello World (JavaScript, npm scripts, Jest). Lab 1, variant 3.",
+  "private": true,
+  "main": "src/index.js",
+  "bin": {
+    "hello": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "node scripts/build.js",
+    "test": "jest --ci",
+    "check": "node scripts/check.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
+    "js-yaml": "4.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/tests"],
+    "modulePathIgnorePatterns": ["<rootDir>/.github/", "<rootDir>/build/"]
+  }
+}
